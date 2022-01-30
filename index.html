@@ -1,3 +1,78 @@
 <html>
-<h1 id="title">Your Favorite Genre Of Music</h1>
+    <head>
+        <style>
+            body {
+                font-family: sans-serif;
+                padding-left: 20%;
+                padding-right: 20%;
+               
+            }
+            label {
+                font-size: 18px;
+                display: block;
+                padding-bottom: 10px;
+            }
+            input, textarea, select {
+                display: block;
+                width: 100%;
+                padding-bottom: 20px;
+            }
+         
+            form{
+                background-color: rgb(167, 167, 167);
+                padding: 40px 40px 40px 40px;
+            }
+            #button-area {
+                float: left;
+                width: 50%;
+                height: 50%;
+            }
+            input [type=checkbox]:not(old) + label,
+            input [type=radio  ]:not(old) + label {
+                display : inline-block;
+                margin-left: -28px;
+                padding-left: 28px;
+            }
+        </style>
+
+    </head>
+<body>
+    <h1 id="title">Your Favorite Genre Of Music</h1>
+    <p id="description"> This is a survey in which you can tell us what your favorite genre of music is</p>
+    <form id="survey-form">
+      <label id="name-label"> Name:</label>
+        <input type="text" name="name" id="name" required placeholder="Name"><br>
+      <label id="email-label">Email: </label> 
+        <input type="email" name="email" id="email" required placeholder="Email"><br>
+      <label id="number-label"> Number:</label>
+        <input type="number" name="number" id="number" min="0" max="10" required placeholder="Number"><br>
+       
+        <label id="genre-type-label">Genre Type</label>
+        <select id="dropdown" name="genre">
+            <option value="hip hop">Hip Hop</option>
+            <option value="rock">Rock</option>
+            <option value="soul">Soul</option>
+        </select>
+        
+        <label id="comment-type-label">Additional Comments</label>
+        <textarea placeholder="Additional Comments"> </textarea><br>
+        
+        <label id="gender-type-label">Gender Type</label>
+        <div id="button-area">
+             <input type="radio" class="radio-inline" name="gender" value="male">Male<br>
+             <input type="radio" class="radio-inline" name="gender" value="female">Female<br>
+             <input type="radio" class="radio-inline" name="gender" value="other">Other<br>
+        </div>
+
+        <label id="transportation-type-label">Transportation Type</label>
+        <div id="button-area">
+             <input type="checkbox" name="vehicle1" value="Bike"> I have a bike <br>
+             <input type="checkbox" name="vehicle2" value="Car"> I have a car<br>
+             <input type="checkbox" name="vehicle3" value="Boat"> I have a boat<br>
+        </div>
+
+       <input type="submit" id="submit">
+    </form>
+    <script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"> </script>
+</body>
 </html>
